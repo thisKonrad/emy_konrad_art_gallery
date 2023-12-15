@@ -1,0 +1,2 @@
+# emy_konrad_art_gallery
+art_gallery_app
