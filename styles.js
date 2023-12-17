@@ -9,13 +9,8 @@ export default createGlobalStyle`
     padding: 0;
   }
 
-  @font-face{
-    font-family: 'Monterey';
-    src: url('../public/monterey/MontereyFLF.woff') format("woff");;
-  }
-
   :root{
-    font-family: 'Monterey', monospace;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 100%;
   }
 
