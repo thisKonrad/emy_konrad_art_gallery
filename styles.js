@@ -31,8 +31,8 @@ export default createGlobalStyle`
     padding: 2rem;
     text-align: center;
     background: radial-gradient(
-      circle, rgb(220,219,219) 0%, 
-      blanchedalmond 100%);
+    circle, rgb(220,219,219) 0%, 
+    blanchedalmond 100%);
   }
 
   h1{
