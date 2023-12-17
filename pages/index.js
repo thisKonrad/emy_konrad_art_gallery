@@ -3,7 +3,7 @@ import Spotlight from "../components/Spotlight.js";
 
 export default function SpotlightPage({pieces}) {
  
-  console.log("pieces: ",pieces);
+  console.log("Pieces: ",pieces);
   /* if not undefined than length */
   if(!pieces.length){
     return null;
