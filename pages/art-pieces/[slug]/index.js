@@ -6,9 +6,10 @@ export default function ArtPieceDetailsPage({ pieces }) {
   const router = useRouter();
   const { slug } = router.query;
 
+  const found = pieces.find((piece) => piece.slug === slug);
   useEffect(() => {
-    setSelectedArtPiece(pieces.find((piece) => piece.slug === slug));
-  }, [setSelectedArtPiece, pieces, slug]);
+    found;
+  }, [found, pieces, slug]);
 
   return (
     <ArtPieceDetailsPage
