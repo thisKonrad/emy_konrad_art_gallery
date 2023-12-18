@@ -7,7 +7,6 @@ export default function ImageContainer({ piece }) {
   function handleToggle() {
     setFavourite(!favourite);
   }
-  console.log("piece in container", piece);
 
   return (
     <div className="image_container">
@@ -33,7 +32,6 @@ export default function ImageContainer({ piece }) {
       <div className="artwork_description">
         <h3>Artist name: {piece.artist}</h3>
         <h3>Title: {piece.name}</h3>
-        <h3>slug: {piece.slug}</h3>
       </div>
     </div>
   );
