@@ -2,10 +2,6 @@ import Spotlight from "../components/Spotlight.js";
 
 
 export default function SpotlightPage({ pieces, onToggleFavourite, artPiecesInfo }) {
-
-
-  console.log("Pieces: ", pieces);
-  /* if not undefined than length */
   if (!pieces.length) {
     return null;
   }

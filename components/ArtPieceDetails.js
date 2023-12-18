@@ -1,7 +1,9 @@
 import Card from "./Card";
+import Comments from "./Comments";
+import CommentForm from "./CommentForm";
 
 
-export default function ArtPieceDetails({ piece, onToggleFavourite }) {
+export default function ArtPieceDetails({ piece, onToggleFavourite, comments, addComment }) {
   return (
     <>
       <header></header>
@@ -20,7 +22,9 @@ export default function ArtPieceDetails({ piece, onToggleFavourite }) {
         </div>
       </div>
       <div>
-        <h2>Comments:</h2>
+        <br />
+        {comments && <Comments comments={comments} />}
+        <CommentForm addComment={addComment} />
       </div>
     </>
   );

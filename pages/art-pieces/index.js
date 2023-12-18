@@ -1,6 +1,5 @@
 import ArtPieces from "../../components/ArtPieces";
 
-
 export default function OverviewPage({ pieces, onToggleFavourite, artPiecesInfo }) {
 
     return (<div className="overview">
@@ -10,4 +9,5 @@ export default function OverviewPage({ pieces, onToggleFavourite, artPiecesInfo 
             artPiecesInfo={artPiecesInfo}
             onToggleFavourite={onToggleFavourite} />
     </div>)
+  );
 }
