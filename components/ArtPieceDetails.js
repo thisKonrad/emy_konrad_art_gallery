@@ -7,7 +7,7 @@ export default function ArtPieceDetails({ piece, comments, addComment }) {
     <>
       <header></header>
       <div>
-        <button type="button">←</button>
+        <button type="butto n">←</button>
         <Card piece={piece}></Card>
         <div className="colorPicker"></div>
         <div>
