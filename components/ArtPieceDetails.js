@@ -1,4 +1,4 @@
-import Card from "./ImageContainer";
+import Card from "./Card";
 
 export default function ArtPieceDetails({ piece }) {
   return (
