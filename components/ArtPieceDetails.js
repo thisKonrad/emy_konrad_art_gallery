@@ -1,12 +1,16 @@
 import Card from "./Card";
 
-export default function ArtPieceDetails({ piece }) {
+export default function ArtPieceDetails({ piece, isFavourite, onToggleFavourite }) {
   return (
     <>
       <header></header>
       <div>
         <button type="button">←</button>
-        <Card piece={piece}></Card>
+        <Card
+          piece={piece}
+          isFavourite={isFavourite}
+          onToggleFavourite={onToggleFavourite}
+        ></Card>
         <div className="colorPicker"></div>
         <div>
           <h2>FamousArtis:{piece.artist}</h2>

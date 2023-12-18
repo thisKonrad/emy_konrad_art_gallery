@@ -1,33 +1,16 @@
-import Image from "next/image";
-import { useState } from "react";
 import ImageContainer from "./ImageContainer";
+import FavouriteButton from "./FavouriteButton.js";
 
-export default function Card({ piece }) {
-  const [favourite, setFavourite] = useState(true);
-  function handleToggle() {
-    setFavourite(!favourite);
-  }
+export default function Card({ piece, onToggleFavourite, isFavourite }) {
+
 
   return (
     <div className="image_container">
-      <button className="favourite_icon" onClick={() => handleToggle()}>
-        {favourite ? (
-          <Image
-            className="clear_icon"
-            width={25}
-            height={25}
-            src="Heart_Clear.svg"
-            alt="clear-heart"
-          ></Image>
-        ) : (
-          <Image
-            width={25}
-            height={25}
-            src="Heart_Filled.svg"
-            alt="filled-heart"
-          ></Image>
-        )}
-      </button>
+      <FavouriteButton
+        isFavourite={isFavourite}
+        piece={piece}
+        onToggleFavourite={onToggleFavourite}
+      />
       <ImageContainer piece={piece} />
       <div className="artwork_description">
         <h3>Artist name: {piece.artist}</h3>
