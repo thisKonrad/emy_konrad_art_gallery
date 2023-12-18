@@ -3,7 +3,6 @@ import { useState } from "react";
 import ArtImage from "./ArtImage";
 
 export default function ImageContainer({ piece }) {
-  console.log("container", piece);
   const [favourite, setFavourite] = useState(true);
   function handleToggle() {
     setFavourite(!favourite);
@@ -34,6 +33,7 @@ export default function ImageContainer({ piece }) {
       <div className="artwork_description">
         <h3>Artist name: {piece.artist}</h3>
         <h3>Title: {piece.name}</h3>
+        <h3>slug: {piece.slug}</h3>
       </div>
     </div>
   );

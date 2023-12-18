@@ -7,7 +7,7 @@ export default function ArtPieces({ pieces }) {
         {pieces &&
           pieces.map((piece) => (
             <li key={piece.slug}>
-              <ImageContainer piece={piece} />
+              <ImageContainer key={piece.slug} piece={piece} />
             </li>
           ))}
       </ul>
