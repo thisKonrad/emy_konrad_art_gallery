@@ -2,13 +2,17 @@ import Card from "./Card";
 import Comments from "./Comments";
 import CommentForm from "./CommentForm";
 
-export default function ArtPieceDetails({ piece, comments, addComment }) {
+
+export default function ArtPieceDetails({ piece, onToggleFavourite, comments, addComment }) {
   return (
     <>
       <header></header>
       <div>
-        <button type="butto n">←</button>
-        <Card piece={piece}></Card>
+        <button type="button">←</button>
+        <Card
+          piece={piece}
+          onToggleFavourite={onToggleFavourite}
+        ></Card>
         <div className="colorPicker"></div>
         <div>
           <h2>FamousArtis:{piece.artist}</h2>
