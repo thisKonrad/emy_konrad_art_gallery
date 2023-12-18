@@ -30,6 +30,8 @@ export default function CommentForm({ addComment }) {
     event.preventDefault();
     const { comment } = event.target.elements;
     addComment(comment.value);
+    console.log(comment.value);
+
     event.target.reset();
   }
   return (

@@ -18,8 +18,9 @@ export default function ArtPieceDetails({ piece, comments, addComment }) {
         </div>
       </div>
       <div>
+        <br />
+        {comments && <Comments comments={comments} />}
         <CommentForm addComment={addComment} />
-        <Comments comments={comments}>Comments:</Comments>
       </div>
     </>
   );

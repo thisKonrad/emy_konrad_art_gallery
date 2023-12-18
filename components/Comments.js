@@ -1,14 +1,14 @@
 export default function Comments({ comments }) {
   return (
     <>
-      <title>Comments</title>
+      {console.log("comments component")}
+      <title>Comments:</title>
       <ul role="list">
-        {comments &&
-          comments.map((comment, index) => (
-            <li key={index}>
-              <p>{comment}</p>
-            </li>
-          ))}
+        {comments.map((comment, index) => (
+          <li key={index}>
+            <p>{comment}</p>
+          </li>
+        ))}
       </ul>
     </>
   );

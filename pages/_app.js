@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }) {
         })
       );
     } else {
-      setArtPiecesInfo([...artPiecesInfo, { comments: [newComment] }]);
+      setArtPiecesInfo([...artPiecesInfo, { slug, comments: [newComment] }]);
     }
   }
   console.log("comments", artPiecesInfo);
