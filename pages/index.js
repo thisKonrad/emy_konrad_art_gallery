@@ -7,19 +7,12 @@ export default function SpotlightPage({ pieces }) {
     return null;
   }
 
-  const randomPicture = pieces[Math.floor(Math.random() * pieces.length)];
-  console.log("random ", randomPicture);
-
+  const randomPiece = pieces[Math.floor(Math.random() * pieces.length)];
 
   return (
     <>
       <h1 className="heading">Art Gallery</h1>
-      <Spotlight
-        image={randomPicture.imageSource}
-        artist={randomPicture.artist}
-        title={randomPicture.name}
-        alt={randomPicture.name}
-      />
+      <Spotlight piece={randomPiece} />
     </>
   );
 }

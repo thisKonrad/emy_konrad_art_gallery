@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import ArtImage from "./ArtImage";
+import ImageContainer from "./ImageContainer";
 
 export default function Card({ piece }) {
   const [favourite, setFavourite] = useState(true);
@@ -28,7 +28,7 @@ export default function Card({ piece }) {
           ></Image>
         )}
       </button>
-      <ArtImage piece={piece} />
+      <ImageContainer piece={piece} />
       <div className="artwork_description">
         <h3>Artist name: {piece.artist}</h3>
         <h3>Title: {piece.name}</h3>
