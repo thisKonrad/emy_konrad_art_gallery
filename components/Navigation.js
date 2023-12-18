@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+
 export default function Navigation(){
 
     return(<nav>
@@ -11,6 +12,7 @@ export default function Navigation(){
             <li><Link href='/favourites'>Favourites</Link>
             </li>
         </ul>
-    </nav>);
+    </nav>
+   );
 
 }

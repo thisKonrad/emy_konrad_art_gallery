@@ -4,7 +4,8 @@ import ArtPiecePreview from "./ArtPiecePreview"
 export default function ArtPieces({pieces}){
 
 
-    return(<ul>
+    return(<div className="art_piece_preview">
+        <ul>
         {pieces && pieces.map((piece)=>
         <li key={piece.slug}>
         <ArtPiecePreview 
@@ -12,5 +13,7 @@ export default function ArtPieces({pieces}){
         image={piece.imageSource} 
         artist={piece.artist}/>
         </li>)}
-    </ul>)
+        </ul>
+    </div>
+ )
 }

@@ -3,7 +3,7 @@ import Spotlight from "../components/Spotlight.js";
 
 export default function SpotlightPage({pieces}) {
  
-  console.log("pieces: ",pieces);
+  console.log("Pieces: ",pieces);
   /* if not undefined than length */
   if(!pieces.length){
     return null;
@@ -14,7 +14,7 @@ export default function SpotlightPage({pieces}) {
   console.log("random ", randomPicture);
 
   return (<>
-      <h1>Art Gallery</h1>
+      <h1 className="heading">Art Gallery</h1>
     <Spotlight
         image={randomPicture.imageSource}
         artist={randomPicture.artist}
