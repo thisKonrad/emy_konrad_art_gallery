@@ -1,23 +1,22 @@
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import ArtPieceDetails from "@/components/ArtPieceDetails";
 
 export default function ArtPieceDetailsPage({ pieces }) {
-  const [selectedArtPiece, setSelectedArtPiece] = useState(null);
+  console.log("slug index", pieces);
+  // const [selectedArtPiece, setSelectedArtPiece] = useState("");
   const router = useRouter();
   const { slug } = router.query;
 
-  const found = pieces.find((piece) => piece.slug === slug);
-  useEffect(() => {
-    found;
-  }, [found, pieces, slug]);
+  const selectedArtPiece = pieces.find((piece) => piece.slug === slug);
+  console.log(selectedArtPiece);
 
   return (
-    <ArtPieceDetailsPage
+    <ArtPieceDetails
       image={selectedArtPiece.imageSource}
       title={selectedArtPiece.title}
       artist={selectedArtPiece.artist}
       year={selectedArtPiece.year}
       genre={selectedArtPiece.genre}
-    ></ArtPieceDetailsPage>
+    ></ArtPieceDetails>
   );
 }
