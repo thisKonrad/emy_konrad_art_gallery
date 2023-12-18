@@ -9,5 +9,4 @@ export default function OverviewPage({ pieces, onToggleFavourite, artPiecesInfo 
             artPiecesInfo={artPiecesInfo}
             onToggleFavourite={onToggleFavourite} />
     </div>)
-  );
 }
