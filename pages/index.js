@@ -11,7 +11,7 @@ export default function SpotlightPage({ pieces }) {
 
   return (
     <>
-      <h1 className="heading">Art Gallery</h1>
+      <h1 className="heading">Spotlight</h1>
       <Spotlight piece={randomPiece} />
     </>
   );
