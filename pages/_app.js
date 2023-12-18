@@ -1,19 +1,16 @@
 import GlobalStyle from "../styles";
 import useSWR from "swr";
 import Layout from "@/components/Layout";
-//import { useState } from "react";
-import { useImmer } from "use-immer";
 import useLocalStorageState from "use-local-storage-state";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 const URL = "https://example-apis.vercel.app/api/art";
 
 export default function App({ Component, pageProps }) {
-  
   const { data, error, isLoading } = useSWR(URL, fetcher);
   if (error) return <div>failed to load</div>;
   if (isLoading) return <div>loading...</div>;
-  
+
   const [artPiecesInfo, setArtPiecesInfo] = useLocalStorageState(
     "art-pieces-info",
     { defaultvalue: [] }
@@ -22,7 +19,7 @@ export default function App({ Component, pageProps }) {
   function handleToggle(slug) {
     const artPiece = artPiecesInfo.find((piece) => piece.slug === slug);
     if (artPiece) {
-      updateArtPiecesInfo(
+      setArtPiecesInfo(
         artPiecesInfo.map((pieceInfo) =>
           pieceInfo.slug === slug
             ? { slug, isFavourite: !pieceInfo.isFavourite }
@@ -30,10 +27,9 @@ export default function App({ Component, pageProps }) {
         )
       );
     } else {
-      updateArtPiecesInfo([...artPiecesInfo, { slug, isFavourite: true }]);
+      setArtPiecesInfo([...artPiecesInfo, { slug, isFavourite: true }]);
     }
   }
-
 
   function addComment(slug, newComment) {
     const artPiece = artPiecesInfo.find((piece) => piece.slug === slug);
@@ -52,10 +48,12 @@ export default function App({ Component, pageProps }) {
         })
       );
     } else {
-      setArtPiecesInfo([...artPiecesInfo, { slug, isFavourite: false ,comments: [newComment] }]);
+      setArtPiecesInfo([
+        ...artPiecesInfo,
+        { slug, isFavourite: false, comments: [newComment] },
+      ]);
     }
   }
-
 
   return (
     <>
