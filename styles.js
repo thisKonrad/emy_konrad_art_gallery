@@ -19,9 +19,9 @@ export default createGlobalStyle`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    min-width: 78%;
+    gap: 1rem; 
+    flex-wrap: wrap; 
+    width: 100%;
     min-height: 100vh;
     margin: 0em auto;
     padding: 2rem;
@@ -29,14 +29,35 @@ export default createGlobalStyle`
     background-image: 
     radial-gradient(
     circle, rgb(218, 218, 218) 0%, 
-    rgb(210, 210, 252) 100%);
+    rgb(249, 249, 252) 100%);
   }
 
-  h1{
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    text-shadow: 0px 8px 1rem rgba(0, 0, 0, 0.4);
+  header{
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 4.4rem;
+    width: 80vw; 
+    padding-top: 0.45rem;
+    margin-bottom: 1rem;
+    right: 225px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
   }
+
+  .heading{
+    position: fixed;
+    align-self: center;
+    top: 6rem;
+    margin-top: 4rem;
+    margin-bottom: 12rem;
+    text-shadow: 0px 8px 1rem rgba(0, 0, 0, 0.4);
+  } 
+
   h2{
     margin: 1.2rem;
   }

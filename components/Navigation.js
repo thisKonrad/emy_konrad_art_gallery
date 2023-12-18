@@ -12,6 +12,7 @@ export default function Navigation(){
             <li><Link href='/favourites'>Favourites</Link>
             </li>
         </ul>
-    </nav>);
+    </nav>
+   );
 
 }

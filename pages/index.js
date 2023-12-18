@@ -14,7 +14,7 @@ export default function SpotlightPage({pieces}) {
   console.log("random ", randomPicture);
 
   return (<>
-      <h1>Art Gallery</h1>
+      <h1 className="heading">Art Gallery</h1>
     <Spotlight
         image={randomPicture.imageSource}
         artist={randomPicture.artist}
