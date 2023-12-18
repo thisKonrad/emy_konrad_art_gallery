@@ -1,6 +1,7 @@
 import Card from "./Card";
 
-export default function ArtPieces({ pieces, isFavourite, onToggleFavourite }) {
+
+export default function ArtPieces({ pieces, onToggleFavourite, artPiecesInfo }) {
   return (
     <div className="art_piece_preview">
       <ul>
@@ -10,7 +11,7 @@ export default function ArtPieces({ pieces, isFavourite, onToggleFavourite }) {
               <Card
                 key={piece.slug}
                 piece={piece}
-                isFavourite={isFavourite}
+                artPiecesInfo={artPiecesInfo}
                 onToggleFavourite={onToggleFavourite} />
             </li>
           ))}

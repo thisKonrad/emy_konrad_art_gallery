@@ -1,6 +1,7 @@
 import Card from "./Card";
 
-export default function ArtPieceDetails({ piece, isFavourite, onToggleFavourite }) {
+
+export default function ArtPieceDetails({ piece, onToggleFavourite }) {
   return (
     <>
       <header></header>
@@ -8,7 +9,6 @@ export default function ArtPieceDetails({ piece, isFavourite, onToggleFavourite 
         <button type="button">←</button>
         <Card
           piece={piece}
-          isFavourite={isFavourite}
           onToggleFavourite={onToggleFavourite}
         ></Card>
         <div className="colorPicker"></div>

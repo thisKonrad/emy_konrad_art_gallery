@@ -1,13 +1,14 @@
 import ImageContainer from "./ImageContainer";
 import FavouriteButton from "./FavouriteButton.js";
 
-export default function Card({ piece, onToggleFavourite, isFavourite }) {
+
+export default function Card({ piece, onToggleFavourite, artPiecesInfo }) {
 
 
   return (
     <div className="image_container">
       <FavouriteButton
-        isFavourite={isFavourite}
+        artPiecesInfo={artPiecesInfo}
         piece={piece}
         onToggleFavourite={onToggleFavourite}
       />

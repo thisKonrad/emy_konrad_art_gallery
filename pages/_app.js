@@ -11,11 +11,8 @@ const URL = "https://example-apis.vercel.app/api/art";
 
 export default function App({ Component, pageProps }) {
 
-  /*   const [artPiecesInfo, setArtPiecesInfo] = useState([]);
-    const [isFavourite, setFavourites] = useState(false); */
 
-  const [artPiecesInfo, setArtPiecesInfo] = useImmer([]);
-  const [isFavourite, setFavourites] = useImmer(false);
+  const [artPiecesInfo, updateArtPiecesInfo] = useImmer([]);
 
   const { data, error, isLoading } = useSWR(URL, fetcher);
   if (error) return <div>failed to load</div>;
@@ -24,24 +21,30 @@ export default function App({ Component, pageProps }) {
   console.log("data: ", data)
 
 
-  function handleToggle(piece) {
-
-    console.log("PIECE::SLUG", piece.slug)
-    setArtPiecesInfo([...artPiecesInfo, piece.name])
-    console.log("Art Pieces Info: ", artPiecesInfo)
-    setFavourites(piece === !isFavourite ? piece = isFavourite : piece = !isFavourite);
-    console.log("favourite:", isFavourite)
-
-
+  function handleToggle(slug) {
+    const artPiece = artPiecesInfo.find((piece) => piece.slug === slug);
+    if (artPiece) {
+      updateArtPiecesInfo(
+        artPiecesInfo.map((pieceInfo) =>
+          pieceInfo.slug === slug
+            ? { slug, isFavourite: !pieceInfo.isFavourite }
+            : pieceInfo
+        )
+      );
+    } else {
+      updateArtPiecesInfo([...artPiecesInfo, { slug, isFavourite: true }]);
+    }
   }
+  console.log("Art Pieces Info: ", artPiecesInfo);
+
 
   return (<>
     <GlobalStyle />
     <Layout />
     <Component {...pageProps}
-      isFavourite={isFavourite}
       onToggleFavourite={handleToggle}
       pieces={isLoading || error ? [] : data}
+      artPiecesInfo={artPiecesInfo}
     />
   </>);
 }

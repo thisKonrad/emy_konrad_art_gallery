@@ -1,6 +1,23 @@
-export default function Favourites(){
+import ArtPieces from "../../components/ArtPieces";
 
-    return (<div>
-        <h1 className="heading">Favourites</h1>
-        </div>)
+export default function Favourites({
+    pieces,
+    artPiecesInfo,
+    onArtPiecesInfo,
+    onToggleFavourite,
+}) {
+    const favourites = pieces.filter((piece) =>
+        artPiecesInfo.find(
+            (artPiece) => artPiece.slug === piece.slug && artPiece.isFavourite
+        )
+    );
+
+    return (
+        <ArtPieces
+            pieces={favourites}
+            onArtPiecesInfo={onArtPiecesInfo}
+            artPiecesInfo={artPiecesInfo}
+            onToggleFavourite={onToggleFavourite}
+        />
+    );
 }
