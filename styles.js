@@ -101,7 +101,7 @@ export default createGlobalStyle`
   }
   img:hover{
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.01);
     transition: 0.2s;
     transition-timing-function: ease-in-out;
   }
