@@ -77,6 +77,10 @@ export default createGlobalStyle`
     margin-left: 3rem;
   }
 
+/*   .art_piece_preview{
+    z-index: 0;
+    top: 22rem;
+  } */
 
   .image_container{
     display: flex;
