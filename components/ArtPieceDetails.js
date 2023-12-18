@@ -1,22 +1,19 @@
 import ImageContainer from "./ImageContainer";
 
-export default function ArtPieceDetails({ image, title, artist, year, genre }) {
+export default function ArtPieceDetails({ piece }) {
   return (
     <>
       <header></header>
       <div>
         <button type="button">←</button>
-        <ImageContainer
-          artist={artist}
-          src={image}
-          alt={title}
-        ></ImageContainer>
+        <ImageContainer piece={piece}></ImageContainer>
         <div className="colorPicker"></div>
-        <div>
-          <h2>FamousArtis:{artist}</h2>
-          <p>Year: {year}</p>
-          <p>Genre: {genre}</p>
-        </div>
+        {/* <div>
+          <h2>FamousArtis:{piece.artist}</h2>
+          <p>Year: {piece.year}</p>
+          <p>Genre: {piece.genre}</p>
+          <p>Genre: {piece.color}</p>
+        </div> */}
       </div>
       <div>
         <h2>Comments:</h2>
