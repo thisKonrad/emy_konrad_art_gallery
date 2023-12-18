@@ -9,7 +9,7 @@ export default function ImageContainer({src, alt, artist}) {
     setFavourite(!favourite)
   }
 
-return (<div>
+return (<div className="image_container">
     <button className ="favourite_icon"
      onClick={()=>handleToggle()}>{
       favourite ?
