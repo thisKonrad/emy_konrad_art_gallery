@@ -1,6 +1,8 @@
 import Card from "./Card";
+import Comments from "./Comments";
+import CommentForm from "./CommentForm";
 
-export default function ArtPieceDetails({ piece }) {
+export default function ArtPieceDetails({ piece, comments, addComment }) {
   return (
     <>
       <header></header>
@@ -16,7 +18,9 @@ export default function ArtPieceDetails({ piece }) {
         </div>
       </div>
       <div>
-        <h2>Comments:</h2>
+        <br />
+        {comments && <Comments comments={comments} />}
+        <CommentForm addComment={addComment} />
       </div>
     </>
   );
