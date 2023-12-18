@@ -1,10 +1,14 @@
 import ArtPieces from "../../components/ArtPieces";
 
-
-export default function OverviewPage({pieces}){
-
-    return (<div className="overview">
-        <h1 className="heading">Art Gallery</h1>
-        <ArtPieces pieces={pieces} />
-        </div>)
+export default function OverviewPage({ pieces, addComment, artPiecesInfo }) {
+  return (
+    <div className="overview">
+      <h1 className="heading">Art Gallery</h1>
+      <ArtPieces
+        pieces={pieces}
+        addComment={addComment}
+        artPiecesInfo={artPiecesInfo}
+      />
+    </div>
+  );
 }

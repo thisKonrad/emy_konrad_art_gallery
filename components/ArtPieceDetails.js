@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 import Card from "./Card";
+=======
+import ImageContainer from "./ImageContainer";
+import Comments from "./Comments";
+import CommentForm from "./CommentForm";
+>>>>>>> Stashed changes
 
-export default function ArtPieceDetails({ piece }) {
+export default function ArtPieceDetails({ piece, comments, addComment }) {
   return (
     <>
       <header></header>
@@ -16,7 +22,8 @@ export default function ArtPieceDetails({ piece }) {
         </div>
       </div>
       <div>
-        <h2>Comments:</h2>
+        <CommentForm addComment={addComment} />
+        <Comments comments={comments}>Comments:</Comments>
       </div>
     </>
   );
