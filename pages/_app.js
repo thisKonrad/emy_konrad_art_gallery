@@ -66,7 +66,7 @@ export default function App({ Component, pageProps }) {
       <Component
         {...pageProps}
         pieces={isLoading || error ? [] : data}
-        onToggleFavourite
+        onToggleFavourite={handleToggle}
         addComment={addComment}
         artPiecesInfo={artPiecesInfo}
       />
