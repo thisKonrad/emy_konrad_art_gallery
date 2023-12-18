@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 import ArtImage from "./ArtImage";
 
-export default function ImageContainer({ piece }) {
+export default function Card({ piece }) {
   const [favourite, setFavourite] = useState(true);
   function handleToggle() {
     setFavourite(!favourite);

@@ -1,4 +1,4 @@
-import ImageContainer from "./ImageContainer";
+import Card from "./ImageContainer";
 
 export default function ArtPieceDetails({ piece }) {
   return (
@@ -6,7 +6,7 @@ export default function ArtPieceDetails({ piece }) {
       <header></header>
       <div>
         <button type="button">←</button>
-        <ImageContainer piece={piece}></ImageContainer>
+        <Card piece={piece}></Card>
         <div className="colorPicker"></div>
         <div>
           <h2>FamousArtis:{piece.artist}</h2>

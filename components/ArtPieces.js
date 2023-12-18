@@ -1,4 +1,4 @@
-import ImageContainer from "./ImageContainer";
+import Card from "./ImageContainer";
 
 export default function ArtPieces({ pieces }) {
   return (
@@ -7,7 +7,7 @@ export default function ArtPieces({ pieces }) {
         {pieces &&
           pieces.map((piece) => (
             <li key={piece.slug}>
-              <ImageContainer key={piece.slug} piece={piece} />
+              <Card key={piece.slug} piece={piece} />
             </li>
           ))}
       </ul>
