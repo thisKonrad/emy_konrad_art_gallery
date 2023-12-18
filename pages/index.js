@@ -1,8 +1,6 @@
 import Spotlight from "../components/Spotlight.js";
 
-export default function SpotlightPage({ pieces }) {
-  console.log("Pieces: ", pieces);
-  /* if not undefined than length */
+export default function SpotlightPage({ pieces, artPiecesInfo }) {
   if (!pieces.length) {
     return null;
   }
@@ -12,7 +10,7 @@ export default function SpotlightPage({ pieces }) {
   return (
     <>
       <h1 className="heading">Spotlight</h1>
-      <Spotlight piece={randomPiece} />
+      <Spotlight piece={randomPiece} artPiecesInfo={artPiecesInfo} />
     </>
   );
 }

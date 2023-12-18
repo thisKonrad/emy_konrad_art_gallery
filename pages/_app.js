@@ -1,7 +1,7 @@
 import GlobalStyle from "../styles";
 import useSWR from "swr";
 import Layout from "@/components/Layout";
-import { useState } from "react";
+import useLocalStorageState from "use-local-storage-state";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 const URL = "https://example-apis.vercel.app/api/art";
@@ -9,9 +9,10 @@ const URL = "https://example-apis.vercel.app/api/art";
 export default function App({ Component, pageProps }) {
   const { data, error, isLoading } = useSWR(URL, fetcher);
 
-  const [artPiecesInfo, setArtPiecesInfo] = useState([]);
-
-  console.log("artPiecesInfo", artPiecesInfo);
+  const [artPiecesInfo, setArtPiecesInfo] = useLocalStorageState(
+    "art-pieces-info",
+    { defaultvalue: [] }
+  );
 
   function addComment(slug, newComment) {
     const artPiece = artPiecesInfo.find((piece) => piece.slug === slug);
