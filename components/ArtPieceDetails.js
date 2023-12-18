@@ -1,10 +1,6 @@
-<<<<<<< Updated upstream
 import Card from "./Card";
-=======
-import ImageContainer from "./ImageContainer";
 import Comments from "./Comments";
 import CommentForm from "./CommentForm";
->>>>>>> Stashed changes
 
 export default function ArtPieceDetails({ piece, comments, addComment }) {
   return (
