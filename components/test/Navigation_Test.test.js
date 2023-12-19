@@ -1,5 +1,8 @@
+/* Navigation Test */
+
 import { render, screen } from "@testing-library/react";
-import Navigation from "./Navigation";
+import Navigation from "../Navigation";
+
 
 test("Spotlight NavLink Pieces is displayed", () => {
     render(<Navigation />);
