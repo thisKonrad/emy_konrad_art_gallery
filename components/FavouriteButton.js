@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function FavouriteButton({ piece, onToggleFavourite, artPiecesInfo }) {
 
-    //console.log("art Piece Info:", artPiecesInfo.isFavourite)
+    console.log("art Piece Info:", artPiecesInfo)
 
     return (<button className="favourite_icon" onClick={() => onToggleFavourite(piece.slug)}>
         {artPiecesInfo.find((item) => item.slug === piece.slug)?.isFavourite

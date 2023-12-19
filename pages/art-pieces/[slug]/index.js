@@ -21,7 +21,8 @@ export default function ArtPieceDetailsPage({
   return (
     <ArtPieceDetails
       piece={selectedArtPiece}
-    onToggleFavourite={onToggleFavourite}
+      artPiecesInfo={artPiecesInfo}
+      onToggleFavourite={onToggleFavourite}
       addComment={(newComment) => addComment(selectedArtPiece.slug, newComment)}
       comments={selectedArtPieceComments}
     ></ArtPieceDetails>

@@ -11,7 +11,8 @@ export default function SpotlightPage({ pieces, onToggleFavourite, artPiecesInfo
   return (
     <>
       <h1 className="heading">Spotlight</h1>
-      <Spotlight piece={randomPiece}
+      <Spotlight
+        piece={randomPiece}
         artPiecesInfo={artPiecesInfo}
         onToggleFavourite={onToggleFavourite} />
     </>

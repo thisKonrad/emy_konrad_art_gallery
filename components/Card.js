@@ -12,7 +12,8 @@ export default function Card({ piece, onToggleFavourite, artPiecesInfo }) {
         piece={piece}
         onToggleFavourite={onToggleFavourite}
       />
-      <ImageContainer piece={piece} />
+      <ImageContainer
+        piece={piece} />
       <div className="artwork_description">
         <h3>Artist name: {piece.artist}</h3>
         <h3>Title: {piece.name}</h3>

@@ -3,7 +3,7 @@ import ArtPieces from "../../components/ArtPieces";
 export default function Favourites({
     pieces,
     artPiecesInfo,
-    onArtPiecesInfo,
+    //onArtPiecesInfo,
     onToggleFavourite,
 }) {
     const favourites = pieces.filter((piece) =>
@@ -15,7 +15,7 @@ export default function Favourites({
     return (
         <ArtPieces
             pieces={favourites}
-            onArtPiecesInfo={onArtPiecesInfo}
+            //onArtPiecesInfo={onArtPiecesInfo}
             artPiecesInfo={artPiecesInfo}
             onToggleFavourite={onToggleFavourite}
         />
