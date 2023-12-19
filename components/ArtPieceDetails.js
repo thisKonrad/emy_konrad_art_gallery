@@ -1,6 +1,8 @@
 import Card from "./Card";
 import Comments from "./Comments";
 import CommentForm from "./CommentForm";
+import Link from "next/link";
+
 
 export default function ArtPieceDetails({
   piece,
@@ -10,9 +12,9 @@ export default function ArtPieceDetails({
   addComment }) {
   return (
     <>
-      <header></header>
       <div>
-        <button type="button">←</button>
+        <button type="button">
+          <Link href={'/art-pieces'}>←</Link></button>
         <Card
           piece={piece}
           onToggleFavourite={onToggleFavourite}
@@ -25,7 +27,7 @@ export default function ArtPieceDetails({
           <p>Genre: {piece.genre}</p>
           <p>Genre: {piece.color}</p>
         </div>
-      </div>
+      </div >
       <div>
         <br />
         {comments && <Comments comments={comments} />}
