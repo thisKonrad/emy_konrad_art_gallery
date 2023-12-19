@@ -12,7 +12,8 @@ export default function ArtPieceDetails({
     <>
       <header></header>
       <div>
-        <button type="button">←</button>
+        <button type="button" onClick={() => <Link href='/art-pieces'>Art Pieces</Link>}>
+          ←</button>
         <Card
           piece={piece}
           onToggleFavourite={onToggleFavourite}
