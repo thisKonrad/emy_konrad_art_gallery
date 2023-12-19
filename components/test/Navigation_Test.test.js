@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Navigation from "./Navigation";
 
-test("a navigation link labeled Spotlight is displayed and navigation link labeled Pieces is displayed", () => {
+test("Spotlight NavLink Pieces is displayed", () => {
     render(<Navigation />);
     const spotlightLink = screen.getByRole("link", {
         name: /spotlight/i,
