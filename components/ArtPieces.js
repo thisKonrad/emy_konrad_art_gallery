@@ -5,9 +5,11 @@ export default function ArtPieces({
   pieces,
   onToggleFavourite,
   artPiecesInfo }) {
+
+
   return (
     <div className="art_piece_preview">
-      <ul>
+      <ul name="art piece list">
         {pieces &&
           pieces.map((piece) => (
             <li key={piece.slug}>
