@@ -3,6 +3,7 @@ import Comments from "./Comments";
 import CommentForm from "./CommentForm";
 import Link from "next/link";
 
+
 export default function ArtPieceDetails({
   piece,
   onToggleFavourite,
@@ -11,7 +12,6 @@ export default function ArtPieceDetails({
   addComment }) {
   return (
     <>
-      <header></header>
       <div>
         <button type="button">
           <Link href={'/art-pieces'}>←</Link></button>

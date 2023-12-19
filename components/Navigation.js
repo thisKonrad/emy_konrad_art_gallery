@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 
-export default function Navigation(){
+export default function Navigation() {
 
-    return(<nav>
+    return (<nav>
         <ul>
             <li><Link href='/'>Spotlight</Link>
             </li>
@@ -13,6 +13,6 @@ export default function Navigation(){
             </li>
         </ul>
     </nav>
-   );
+    );
 
 }
