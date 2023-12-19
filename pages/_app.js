@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
 
   const [artPiecesInfo, setArtPiecesInfo] = useLocalStorageState(
     "art-pieces-info",
-    { defaultvalue: [] }
+    { defaultValue: [] }
   );
 
   if (error) return <div>failed to load</div>;
