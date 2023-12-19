@@ -28,8 +28,8 @@ export default createGlobalStyle`
     text-align: center;
     background-image: 
     radial-gradient(
-    circle, rgb(218, 218, 218) 0%, 
-    rgb(249, 249, 252) 100%);
+    circle, rgb(218, 218, 218) 60%, 
+    rgb(255, 245, 180) 100%);
   }
 
   header{
