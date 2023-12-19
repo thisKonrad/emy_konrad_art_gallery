@@ -119,4 +119,15 @@ export default createGlobalStyle`
     opacity: 0.25;
   }
 
+  .backButton{
+    width: 8rem;
+    height: 2.4rem;
+    padding: 0.25rem;
+    border: none;
+    border-radius: 4px
+    margin-left: 36rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.4);
+  }
+
 `;

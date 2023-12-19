@@ -13,8 +13,8 @@ export default function ArtPieceDetails({
   return (
     <>
       <div>
-        <button type="button">
-          <Link href={'/art-pieces'}>←</Link></button>
+        <button type="button" className="backButton">
+          <Link href={'/art-pieces'}>← back</Link></button>
         <Card
           piece={piece}
           onToggleFavourite={onToggleFavourite}
