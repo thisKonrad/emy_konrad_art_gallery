@@ -10,14 +10,15 @@ const URL = "https://example-apis.vercel.app/api/art";
 
 export default function App({ Component, pageProps }) {
 
-  const [artPiecesInfo, setArtPiecesInfo] = useLocalStorageState(
-    "art-pieces-info",
-    { defaultvalue: [] }
-  );
-
   const { data, error, isLoading } = useSWR(URL, fetcher);
+
+  const [artPiecesInfo, setArtPiecesInfo] = useLocalStorageState("art-pieces-info", { defaultValue: [] });
+
   if (error) return <div>failed to load</div>;
   if (isLoading) return <div>loading...</div>;
+
+  console.log("DATA: ", data);
+  console.log("artPiecesInfo: ", artPiecesInfo)
 
 
   function handleToggle(slug) {
