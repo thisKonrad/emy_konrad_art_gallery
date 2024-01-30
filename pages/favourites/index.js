@@ -1,9 +1,10 @@
+/* :::: Favourites :::: */
 import ArtPieces from "../../components/ArtPieces";
+
 
 export default function Favourites({
     pieces,
     artPiecesInfo,
-    //onArtPiecesInfo,
     onToggleFavourite,
 }) {
     const favourites = pieces.filter((piece) =>
@@ -12,15 +13,15 @@ export default function Favourites({
         )
     );
 
-    return (<>
-        <p className="heading">Favourites</p>
-        <ArtPieces
-            pieces={favourites}
-            //onArtPiecesInfo={onArtPiecesInfo}
-            artPiecesInfo={artPiecesInfo}
-            onToggleFavourite={onToggleFavourite}
-        />
-    </>
 
-    );
+    return (
+        <main>
+            <p className="heading">Favourites</p>
+            <ArtPieces
+                pieces={favourites}
+                //onArtPiecesInfo={onArtPiecesInfo}
+                artPiecesInfo={artPiecesInfo}
+                onToggleFavourite={onToggleFavourite}
+            />
+        </main>);
 }

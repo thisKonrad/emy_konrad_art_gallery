@@ -36,7 +36,6 @@ export default function Navigation() {
                     </Link>
 
                 </div>
-
             </li>
             <li
                 className={NavStyles.nav_list}
@@ -49,10 +48,7 @@ export default function Navigation() {
                         href='/favourites'>
                         Favourites
                     </Link>
-
-
                 </div>
-
             </li>
         </ul>
     </nav>
