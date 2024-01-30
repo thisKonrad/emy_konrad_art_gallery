@@ -10,8 +10,9 @@ export default function SpotlightPage({ pieces, onToggleFavourite, artPiecesInfo
 
   return (
     <>
-      <p className="heading">Spotlight</p>
+
       <main>
+        <p className="heading">Spotlight</p>
         <Spotlight
           classname='spotlight_image'
           piece={randomPiece}

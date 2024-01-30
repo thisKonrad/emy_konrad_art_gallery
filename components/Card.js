@@ -20,7 +20,7 @@ export default function Card({ piece, onToggleFavourite, artPiecesInfo }) {
       <div className={ArtPieceCardStyle.text_wrap}>
         <p
           className={ArtPieceCardStyle.title}
-        >Artist name: </p>
+        >Artist Name: </p>
         <p
           className={ArtPieceCardStyle.paragraph}
         >{piece.artist}</p>

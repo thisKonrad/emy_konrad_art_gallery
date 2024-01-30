@@ -14,8 +14,6 @@ export default function ArtPieceDetails({
   comments,
   addComment }) {
 
-  console.log('PIECE DETAIL COLOR: ', piece.colors)
-
 
   return (<main>
     <section
