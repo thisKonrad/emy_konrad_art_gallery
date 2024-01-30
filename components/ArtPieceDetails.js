@@ -12,29 +12,38 @@ export default function ArtPieceDetails({
   artPiecesInfo,
   comments,
   addComment }) {
-  return (
-    <>
+
+
+  return (<main>
+    <section
+      className={DetailStyles.details_wrap}
+    >
+      <button
+        type="button"
+        className={DetailStyles.back_button}
+      >
+        <Link href={'/art-pieces'}>← back</Link></button>
+      <Card
+        piece={piece}
+        onToggleFavourite={onToggleFavourite}
+        artPiecesInfo={artPiecesInfo}
+      ></Card>
       <div>
-        <button type="button" className={DetailStyles.back_button}>
-          <Link href={'/art-pieces'}>← back</Link></button>
-        <Card
-          piece={piece}
-          onToggleFavourite={onToggleFavourite}
-          artPiecesInfo={artPiecesInfo}
-        ></Card>
-        <div className="colorPicker"></div>
-        <div>
-          <h2>FamousArtis:{piece.artist}</h2>
-          <p>Year: {piece.year}</p>
-          <p>Genre: {piece.genre}</p>
-          <p>Genre: {piece.color}</p>
-        </div>
-      </div >
+        <p>FamousArtis:</p>
+        <p>{piece.artist}</p>
+        <p>Year: </p>
+        <p>{piece.year}</p>
+        <p>Genre: </p>
+        <p>{piece.genre}</p>
+        <p>Genre:</p>
+        <p> {piece.color}</p>
+      </div>
       <div>
         <br />
         {comments && <Comments comments={comments} />}
         <CommentForm addComment={addComment} />
       </div>
-    </>
-  );
+    </ section>
+
+  </main>);
 }
