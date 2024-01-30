@@ -3,7 +3,7 @@ import Card from "./Card";
 import Comments from "./Comments";
 import CommentForm from "./CommentForm";
 import Link from "next/link";
-import DetailStyles from '../styles/DetailStyles.module.css'
+import DetailStyles from '../styles/DetailStyles.module.css';
 
 
 export default function ArtPieceDetails({
@@ -12,6 +12,8 @@ export default function ArtPieceDetails({
   artPiecesInfo,
   comments,
   addComment }) {
+
+  console.log('PIECE DETAIL COLOR: ', piece.colors)
 
 
   return (<main>
@@ -22,21 +24,60 @@ export default function ArtPieceDetails({
         type="button"
         className={DetailStyles.back_button}
       >
-        <Link href={'/art-pieces'}>← back</Link></button>
+        <Link
+          className={DetailStyles.back_button_content}
+          href={'/art-pieces'}>
+          ← back
+        </Link>
+      </button>
       <Card
         piece={piece}
         onToggleFavourite={onToggleFavourite}
         artPiecesInfo={artPiecesInfo}
       ></Card>
       <div>
-        <p>FamousArtis:</p>
-        <p>{piece.artist}</p>
-        <p>Year: </p>
-        <p>{piece.year}</p>
-        <p>Genre: </p>
-        <p>{piece.genre}</p>
-        <p>Genre:</p>
-        <p> {piece.color}</p>
+        <p
+          className={DetailStyles.title}
+        >Year: </p>
+        <p
+          className={DetailStyles.paragraph}>
+          {piece.year}</p>
+        <br></br>
+        <p
+          className={DetailStyles.title}
+        >Genre:</p>
+        <p
+          className={DetailStyles.paragraph}
+        >{piece.genre}</p>
+        <br></br>
+        <p
+          className={DetailStyles.title}
+        >Colors:</p>
+
+        <section
+          className={DetailStyles.color_wrap}>
+          <div
+            className={DetailStyles.color_pattern}
+            style={{ backgroundColor: `${piece.colors[0]}` }}
+          > {piece.colors[0]}
+          </div>
+          <div
+            className={DetailStyles.color_pattern}
+            style={{ backgroundColor: `${piece.colors[1]}` }}
+          > {piece.colors[1]}</div>
+          <div
+            className={DetailStyles.color_pattern}
+            style={{ backgroundColor: `${piece.colors[2]}` }}
+          > {piece.colors[2]}</div>
+          <div
+            className={DetailStyles.color_pattern}
+            style={{ backgroundColor: `${piece.colors[3]}` }}
+          >{piece.colors[3]}</div>
+        </section>
+
+        <p
+          className={DetailStyles.comment_title}
+        >Comments:</p>
       </div>
       <div>
         <br />
