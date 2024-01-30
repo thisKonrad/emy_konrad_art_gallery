@@ -12,12 +12,15 @@ export default function Favourites({
         )
     );
 
-    return (
+    return (<>
+        <p className="heading">Favourites</p>
         <ArtPieces
             pieces={favourites}
             //onArtPiecesInfo={onArtPiecesInfo}
             artPiecesInfo={artPiecesInfo}
             onToggleFavourite={onToggleFavourite}
         />
+    </>
+
     );
 }

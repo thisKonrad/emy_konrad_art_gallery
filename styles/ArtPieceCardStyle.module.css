@@ -1,0 +1,43 @@
+/* :::: art piece card style :::: */
+.card_wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    height: 32rem;
+    width: 22rem;
+    padding: 0.8rem;
+    background-color: var(--cardColor);
+}
+
+.image_wrap{
+    width: 80%;
+    height: 80%;
+    margin-top: 1rem;
+}
+
+.text_wrap{
+    width: 80%;
+    height: 80%;
+}
+
+.paragraph, .title{
+    line-break: auto;
+    font-size: 1rem;
+    font-weight: lighter;
+    letter-spacing: 4px;
+    /* word-break: break-all; */
+    margin: 0.6em 0em 0.6em 0em;
+}
+
+.title{
+    text-decoration: underline;
+}
+
+.favourite_button{
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    margin-left: 80%;
+}

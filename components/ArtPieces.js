@@ -1,4 +1,6 @@
+/* :: ART PIECES :: */
 import Card from "./Card";
+import ArtPieceListStyle from '../styles/ArtPieceListStyle.module.css';
 
 
 export default function ArtPieces({
@@ -8,12 +10,16 @@ export default function ArtPieces({
 
 
   return (
-    <div className="art_piece_preview">
-      <ul name="art piece list">
+    <div className={ArtPieceListStyle.preview}>
+      <ul
+        name="art piece list"
+        className={ArtPieceListStyle.list}
+      >
         {pieces &&
           pieces.map((piece) => (
             <li key={piece.slug}>
               <Card
+                className={ArtPieceListStyle.card}
                 key={piece.slug}
                 piece={piece}
                 artPiecesInfo={artPiecesInfo}

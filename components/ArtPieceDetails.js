@@ -1,3 +1,4 @@
+/* :: ART PIECES DETAILS :: */
 import Card from "./Card";
 import Comments from "./Comments";
 import CommentForm from "./CommentForm";

@@ -1,0 +1,28 @@
+/* :::: Art Piece List Style :::: */
+
+.preview{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: green;
+
+}
+
+.list{
+    list-style: none;
+    display: flex;
+    width: 78%;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.4rem;
+    flex-wrap: wrap;
+    background-color: violet;
+}
+.card{
+    display: block;
+    width: 20%;
+    background-color: red;
+    word-wrap: break-word;
+}
