@@ -1,12 +1,15 @@
+/* :: CARD :: */
 import ImageContainer from "./ImageContainer";
 import FavouriteButton from "./FavouriteButton.js";
+import ArtPieceCardStyle from '../styles/ArtPieceCardStyle.module.css';
+
 
 
 export default function Card({ piece, onToggleFavourite, artPiecesInfo }) {
 
 
   return (
-    <div className="image_container">
+    <div className={ArtPieceCardStyle.card_wrap}>
       <FavouriteButton
         artPiecesInfo={artPiecesInfo}
         piece={piece}
@@ -14,9 +17,19 @@ export default function Card({ piece, onToggleFavourite, artPiecesInfo }) {
       />
       <ImageContainer
         piece={piece} />
-      <div className="artwork_description">
-        <h3>Artist name: {piece.artist}</h3>
-        <h3>Title: {piece.name}</h3>
+      <div className={ArtPieceCardStyle.text_wrap}>
+        <p
+          className={ArtPieceCardStyle.title}
+        >Artist name: </p>
+        <p
+          className={ArtPieceCardStyle.paragraph}
+        >{piece.artist}</p>
+        <p
+          className={ArtPieceCardStyle.title}
+        >Title:</p>
+        <p
+          className={ArtPieceCardStyle.paragraph}
+        >{piece.name}</p>
       </div>
     </div>
   );
