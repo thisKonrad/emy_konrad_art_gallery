@@ -90,7 +90,11 @@
 
 
 .comment_list{
+    cursor: pointer;
     list-style: none;
+}
+.comment_list:hover{
+    text-decoration: line-through;
 }
 
 .comment{

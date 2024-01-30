@@ -19,7 +19,9 @@ export default function ArtPieceDetailsPage({
     (piece) => piece.slug === selectedArtPiece?.slug
   )?.comments;
 
-  return (
+  return (<main>
+
+    <p className="heading">Details</p>
     <ArtPieceDetails
       piece={selectedArtPiece}
       artPiecesInfo={artPiecesInfo}
@@ -27,5 +29,5 @@ export default function ArtPieceDetailsPage({
       addComment={(newComment) => addComment(selectedArtPiece.slug, newComment)}
       comments={selectedArtPieceComments}
     ></ArtPieceDetails>
-  );
+  </main>);
 }

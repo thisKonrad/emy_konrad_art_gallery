@@ -15,15 +15,15 @@ export default function FavouriteButton({ piece, onToggleFavourite, artPiecesInf
             (<Image
                 width={25}
                 height={25}
-                src="Heart_Filled.svg"
-                alt="filled-heart"
+                src='/Heart_Filled.svg'
+                alt='filled-heart'
             ></Image>
             ) : (<Image
-                className="clear_icon"
+                className='clear_icon'
                 width={25}
                 height={25}
-                src="Heart_Clear.svg"
-                alt="clear-heart"
+                src='/Heart_Clear.svg'
+                alt='clear-heart'
             ></Image>
             )}
     </button>);
