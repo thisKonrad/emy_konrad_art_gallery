@@ -3,6 +3,7 @@ import Card from "./Card";
 import Comments from "./Comments";
 import CommentForm from "./CommentForm";
 import Link from "next/link";
+import { BsChevronDoubleLeft } from "react-icons/bs";
 import DetailStyles from '../styles/DetailStyles.module.css';
 
 
@@ -27,7 +28,7 @@ export default function ArtPieceDetails({
         <Link
           className={DetailStyles.back_button_content}
           href={'/art-pieces'}>
-          ← back
+          < BsChevronDoubleLeft />
         </Link>
       </button>
       <Card
