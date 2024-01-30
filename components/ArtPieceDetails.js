@@ -2,6 +2,7 @@ import Card from "./Card";
 import Comments from "./Comments";
 import CommentForm from "./CommentForm";
 import Link from "next/link";
+import DetailStyles from '../styles/DetailStyles.module.css'
 
 
 export default function ArtPieceDetails({
@@ -13,7 +14,7 @@ export default function ArtPieceDetails({
   return (
     <>
       <div>
-        <button type="button" className="backButton">
+        <button type="button" className={DetailStyles.back_button}>
           <Link href={'/art-pieces'}>← back</Link></button>
         <Card
           piece={piece}

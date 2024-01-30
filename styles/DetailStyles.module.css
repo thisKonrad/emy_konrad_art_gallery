@@ -1,0 +1,14 @@
+/* :::: detail styles :::: */
+
+.back_btn{
+    width: 8rem;
+    height: 2.4rem;
+    padding: 12px;
+    border: none;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-left: 36rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.4);
+}
