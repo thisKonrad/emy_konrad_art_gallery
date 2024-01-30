@@ -1,4 +1,11 @@
 # art gallery 
 
-this was a spiced challenge done with next.js and the page router.
-there was no Zustand used @ this point so its a messy thing with passed props down till the end :point_down:
+basic art gallery app.
+
+you can mark artwork as favourite & comment it.
+
+this was a spiced group project done with next.js and the page router.
+
+goal of the exercise was data fetching with react and next.js
+and react itself of course..
+
